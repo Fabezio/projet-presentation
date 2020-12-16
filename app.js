@@ -23,27 +23,30 @@ mongoose.connect(
 const PORT = 3000 || 8080
 
 app
-  .set('view engine', path.join(__dirname, 'views'))
+  // .set('view engine', path.join(__dirname, 'views'))
   .set('view engine', 'pug')
   .use(express.static('public'))
-  .get('/', (req, res) => {
-    User.find({}, (err, found) => {
-      err ? console.log(err) : res.render('index', { users: found })
-    })
+app.get('/', (req, res) => {
+  User.find({}, (err, found) => {
+    err ? console.log(err) : res.render('index', { users: found })
   })
+})
+app.get('/login', (req, res) => {
+  res.render('login', {})
+})
 
-  .get('/manifest.json', (req, res) => {
-    res.header('Content-Type', 'text/cache-manifest')
-    res.sendFile(path.join(__dirname, 'manifest.json'))
-  })
-  .get('/sw.js', (req, res) => {
-    res.header('Content-Type', 'text/javascript')
-    res.sendFile(path.join(__dirname, 'sw.js'))
-  })
-  .get('/loader.js', (req, res) => {
-    res.header('Content-Type', 'text/javascript')
-    res.sendFile(path.join(__dirname, 'loader.js'))
-  })
-  .listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}`)
-  })
+// app.get('/manifest.json', (req, res) => {
+//   res.header('Content-Type', 'text/cache-manifest')
+//   res.sendFile(path.join(__dirname, 'manifest.json'))
+// })
+// app.get('/sw.js', (req, res) => {
+//   res.header('Content-Type', 'text/javascript')
+//   res.sendFile(path.join(__dirname, 'sw.js'))
+// })
+// app.get('/loader.js', (req, res) => {
+//   res.header('Content-Type', 'text/javascript')
+//   res.sendFile(path.join(__dirname, 'loader.js'))
+// })
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`)
+})
