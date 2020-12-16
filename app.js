@@ -23,6 +23,7 @@ mongoose.connect(
 const PORT = 3000 || 8080
 
 app
+  .set('view engine', path.join(__dirname, 'views'))
   .set('view engine', 'pug')
   .use(express.static('public'))
   .get('/', (req, res) => {

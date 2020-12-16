@@ -1,24 +1,18 @@
-doctype html
-html(lang="fr")
-    head
-        meta(charset="utf-8")
-        meta(name="description", content="une appli pwa avec pug")
-        meta(name='viewport' content='width=device-width, initial-scale=1')
-        link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1' crossorigin='anonymous')
-        link(rel="manifest", href="../manifest.json")
-        title PWA test
-    body
-        .container
-            h1 Test
+extends _layout
+block content
+    h1 Test
+    h2 pug c'est trop de la balle!
 
-            if users.length
-                each user in users
-                    p= user.firstname
-                    p= user.lastname
-                    p= user.email
-                    //- p= user.firstname
-                    img(src=user.avatar alt="avatar" width="200")
-            else
-                p no user yet
+    if users.length
+        .card-group
+            each user in users
+                .card.w-50()
+                    img(src=user.avatar class="card-top-img" alt="avatar" width="200")
+                    .card-content
+                        p= user.firstname
+                        p= user.lastname
+                        p= user.email
+                        //- p= user.firstname
+    else
+        p no user yet
 
-        script(src="loader")

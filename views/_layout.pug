@@ -1,0 +1,16 @@
+doctype html
+html(lang="fr")
+    head
+        meta(charset="utf-8")
+        meta(name="description" content="une appli pwa avec pug")
+        meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        //- script(src="scripts/bootstrap.min.js")
+        //- link(href='styles/bootstrap.min.css' rel='stylesheet' )
+        link(href='styles/main.scss' rel='stylesheet' )
+        link(rel="manifest" href="../manifest.json")
+        title PWA test
+    body
+        .container
+            block content
+
+        script(src="../loader.js")

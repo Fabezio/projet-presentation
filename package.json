@@ -19,5 +19,18 @@
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "bootstrap": "^5.0.0-beta1",
+    "install": "^0.13.0",
+    "node-sass": "^5.0.0",
+    "popper": "^1.0.1",
+    "sass-loader": "^10.1.0",
+    "yarn": "^1.22.10"
+  },
+  "peerDependencies": {
+    "jquery": "^1.9.1",
+    "popper": "^1.16.1",
+    "webpack": "^5.0.0"
   }
 }
