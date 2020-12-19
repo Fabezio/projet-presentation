@@ -1,20 +1,6 @@
 extends partials/_layout.pug
 block content
-    h1 Accueil
-    h2 Liste détaillée des abonnés
+    h1 Réinitialisation
+    h2 remplir le formulaire ci-dessous
 
-    if users.length
-        .card-group
-            each user in users
-                .card.rounded-lg.border-secondary.p-2
-                    .row
-                        .col-auto
-                            img(src=user.avatar class="card-top-img" alt="avatar" width="175")
-                        .col-auto
-                            p= user.firstname
-                            p= user.lastname
-                            p= user.email
-                            //- p= user.firstname
-    else
-        p no user yet
-
+    
