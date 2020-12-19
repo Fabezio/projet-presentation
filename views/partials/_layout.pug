@@ -1,0 +1,22 @@
+doctype html
+html(lang="fr")
+head
+    meta(charset="utf-8")
+    meta(name="description" content="une appli pwa avec pug")
+    meta(name="theme-color" )
+    link(rel="apple-touch-icon" href="/example.png")
+
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel="manifest" href="../manifest.json")
+    //- script(src="scripts/bootstrap.min.js")
+    //- link(href='styles/bootstrap.min.css' rel='stylesheet' )
+    link(href='styles/style.css' rel='stylesheet' )
+    link(href='favicon.ico' rel='icon' )
+    title PWA test
+body
+    include ./_navbar.pug
+    .container
+        block content
+
+    script(src="../loader.js")
+    script() console.log(`current page: ${window.location}`)

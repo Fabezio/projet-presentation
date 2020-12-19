@@ -1,4 +1,4 @@
-extends _layout
+extends partials/_layout.pug
 block content
     h1 Test
     h2 pug c'est trop de la balle!
@@ -6,13 +6,15 @@ block content
     if users.length
         .card-group
             each user in users
-                .card.w-50()
-                    img(src=user.avatar class="card-top-img" alt="avatar" width="200")
-                    .card-content
-                        p= user.firstname
-                        p= user.lastname
-                        p= user.email
-                        //- p= user.firstname
+                .card.rounded-lg.border-info.p-2
+                    .row
+                        .col-auto
+                            img(src=user.avatar class="card-top-img" alt="avatar" width="175")
+                        .col-auto
+                            p= user.firstname
+                            p= user.lastname
+                            p= user.email
+                            //- p= user.firstname
     else
         p no user yet
 

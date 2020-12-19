@@ -28,25 +28,25 @@ app
   .use(express.static('public'))
 app.get('/', (req, res) => {
   User.find({}, (err, found) => {
-    err ? console.log(err) : res.render('index', { users: found })
+    return err ? console.log(err) : res.render('index', { users: found })
   })
 })
 app.get('/login', (req, res) => {
-  res.render('login', {})
+  return res.render('login', {})
 })
 
-// app.get('/manifest.json', (req, res) => {
-//   res.header('Content-Type', 'text/cache-manifest')
-//   res.sendFile(path.join(__dirname, 'manifest.json'))
-// })
-// app.get('/sw.js', (req, res) => {
-//   res.header('Content-Type', 'text/javascript')
-//   res.sendFile(path.join(__dirname, 'sw.js'))
-// })
-// app.get('/loader.js', (req, res) => {
-//   res.header('Content-Type', 'text/javascript')
-//   res.sendFile(path.join(__dirname, 'loader.js'))
-// })
+app.get('/manifest.json', (req, res) => {
+  res.header('Content-Type', 'text/cache-manifest')
+  res.sendFile(path.join(__dirname, 'manifest.json'))
+})
+app.get('/sw.js', (req, res) => {
+  res.header('Content-Type', 'text/javascript')
+  res.sendFile(path.join(__dirname, 'sw.js'))
+})
+app.get('/loader.js', (req, res) => {
+  res.header('Content-Type', 'text/javascript')
+  res.sendFile(path.join(__dirname, 'loader.js'))
+})
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`)
 })
