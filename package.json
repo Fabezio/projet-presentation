@@ -29,8 +29,8 @@
     "yarn": "^1.22.10"
   },
   "peerDependencies": {
-    "jquery": "^1.9.1",
-    "popper": "^1.16.1",
+    "@popperjs/core": "^2.5.4",
     "webpack": "^5.0.0"
+    
   }
 }

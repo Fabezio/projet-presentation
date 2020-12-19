@@ -34,6 +34,24 @@ app.get('/', (req, res) => {
 app.get('/login', (req, res) => {
   return res.render('login', {})
 })
+app.get('/signup', (req, res) => {
+  return res.render('signup', {})
+})
+app.get('/dashboard', (req, res) => {
+  return res.render('dashboard', {})
+})
+app.get('/bio-auth', (req, res) => {
+  return res.render('bio-auth', {})
+})
+app.get('/bio-signup', (req, res) => {
+  return res.render('bio-signup', {})
+})
+app.get('/forgotten', (req, res) => {
+  return res.render('forgotten', {})
+})
+app.get('/reset', (req, res) => {
+  return res.render('reset', {})
+})
 
 app.get('/manifest.json', (req, res) => {
   res.header('Content-Type', 'text/cache-manifest')
