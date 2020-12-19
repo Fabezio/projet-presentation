@@ -7,7 +7,7 @@ head
     link(rel="apple-touch-icon" href="/example.png")
 
     meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
-    link(rel="manifest" href="../manifest.json")
+    link(rel="manifest" href="/manifest.json")
     //- script(src="scripts/bootstrap.min.js")
     //- link(href='styles/bootstrap.min.css' rel='stylesheet' )
     link(href='styles/style.css' rel='stylesheet' )
@@ -15,8 +15,8 @@ head
     title PWA test
 body
     include ./_navbar.pug
-    .container
+    .container.mt-4
         block content
 
+    script(src="../pages.js")
     script(src="../loader.js")
-    script() console.log(`current page: ${window.location}`)

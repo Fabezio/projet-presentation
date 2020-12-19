@@ -10619,5 +10619,9 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body, .card {
+  background: deepskyblue;
+  color: #212529;
+}
 
 /*# sourceMappingURL=style.css.map */
