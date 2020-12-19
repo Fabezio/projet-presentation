@@ -1,0 +1,15 @@
+extends partials/_layout.pug
+block content
+    h1 s'enregistrer
+    h2 ou 
+        a(href="/login" class="text-decoration-none") se connecter
+        |
+        | à projet
+    form.py-2
+        input(class="form-control mb-2" type="email" name="email" placeholder="email")
+        input(class="form-control mb-2" type="password" name="password" placeholder="mot de passe")
+        a(class="btn-lg btn-danger text-center d-block text-decoration-none text-uppercase" type="submit") M'identifier
+
+    //- a(class="d-block py-2" href="forgotten") mot de passe perdu?
+
+    a(class="btn-lg btn-danger d-block text-center text-decoration-none text-uppercase" href="bio-signup") M'identifier avec mon empreinte digitale

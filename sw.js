@@ -3,7 +3,14 @@ const cacheName = 'static-cache'
 self.addEventListener('install', evt => {
   // console.log("install: " + evt)
   const cachePromise = caches.open(cacheName).then(cache => {
-    return cache.addAll([['views/index.pug', 'views/login.pug']])
+    return cache.addAll([
+      'views/index.pug',
+      'views/login.pug',
+      'views/signup.pug',
+      'views/dashboard.pug',
+      'views/bio-auth.pug',
+      'views/bio-signup.pug'
+    ])
   })
   evt.waitUntil(cachePromise)
 })

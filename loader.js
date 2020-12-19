@@ -3,7 +3,7 @@
 const page = document.location.pathname
 const links = document.getElementsByClassName('nav-link')
 // console.log(links)
-for (let link of links) {
+for (const link of links) {
   // console.log(link.getAttribute('href'))
   link.getAttribute('href') === page
     ? link.classList.add('active')

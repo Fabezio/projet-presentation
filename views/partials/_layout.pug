@@ -16,7 +16,8 @@ head
 body
     include ./_navbar.pug
     .container.mt-4
+        noscript.alert.alert-warning Cette application est sûre, Pour votre confort, veuillez  activer les scripts
         block content
 
-    script(src="../pages.js")
+    //- script(src="../pages.js")
     script(src="../loader.js")
